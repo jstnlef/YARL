@@ -1,8 +1,8 @@
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
-using YARL.Leaderboards;
+using YARL.Features.Leaderboards.Contracts;
 
-namespace YARL.Infrastructure;
+namespace YARL.Infrastructure.Serialization;
 
 [JsonSourceGenerationOptions(PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]
 [JsonSerializable(typeof(ApiEnvelope<ProviderInfoResponse>))]

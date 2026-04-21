@@ -1,7 +1,9 @@
 using Microsoft.Extensions.Options;
-using YARL.Leaderboards;
+using YARL.Features.Leaderboards.Configuration;
+using YARL.Features.Leaderboards.Domain;
+using YARL.Features.Leaderboards.Services;
 
-namespace YARL.Tests.Leaderboards;
+namespace YARL.Tests.Features.Leaderboards.Services;
 
 public class InMemoryOfficialSongCatalogTests
 {

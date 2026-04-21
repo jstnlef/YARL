@@ -1,4 +1,4 @@
-namespace YARL.Leaderboards;
+namespace YARL.Features.Leaderboards.Domain;
 
 public sealed record OfficialSongCatalogEntry(
     SongHash SongHash,

@@ -1,4 +1,4 @@
-namespace YARL.Leaderboards;
+namespace YARL.Features.Leaderboards.Contracts;
 
 public sealed record SongStatusResponse(
     bool IsOfficial,

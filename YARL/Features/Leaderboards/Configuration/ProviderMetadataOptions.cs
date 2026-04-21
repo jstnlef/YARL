@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace YARL.Leaderboards;
+namespace YARL.Features.Leaderboards.Configuration;
 
 public sealed class ProviderMetadataOptions
 {

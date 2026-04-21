@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
+using YARL.Features.Leaderboards.Domain;
 
-namespace YARL.Leaderboards;
+namespace YARL.Features.Leaderboards.Services;
 
 public interface IOfficialSongCatalog
 {

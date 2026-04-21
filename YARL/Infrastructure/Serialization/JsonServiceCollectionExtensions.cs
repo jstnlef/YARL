@@ -1,4 +1,4 @@
-using YARL.Infrastructure;
+using YARL.Infrastructure.Serialization;
 
 namespace Microsoft.Extensions.DependencyInjection;
 

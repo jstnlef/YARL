@@ -1,36 +1,18 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
+using YARL.Features.Leaderboards.Contracts;
+using YARL.Features.Leaderboards.Domain;
+using YARL.Features.Leaderboards.Services;
 
-namespace YARL.Leaderboards;
+namespace YARL.Features.Leaderboards.Endpoints;
 
-public static class LeaderboardEndpointRouteBuilderExtensions
+internal static class GetSongStatusEndpoint
 {
-    public static IEndpointRouteBuilder MapLeaderboardEndpoints(this IEndpointRouteBuilder endpoints)
-    {
-        var providerGroup = endpoints.MapGroup("/provider");
-        providerGroup.MapGet("/info", GetProviderInfo)
-            .WithName("GetProviderInfo");
-
-        var songGroup = endpoints.MapGroup("/songs");
-        songGroup.MapGet("/{songHash}/status", GetSongStatus)
+    public static RouteHandlerBuilder Map(RouteGroupBuilder group) =>
+        group.MapGet("/{songHash}/status", Handle)
             .WithName("GetSongStatus");
 
-        return endpoints;
-    }
-
-    private static Ok<ApiEnvelope<ProviderInfoResponse>> GetProviderInfo(IOptions<ProviderMetadataOptions> options)
-    {
-        var response = new ProviderInfoResponse(
-            options.Value.DisplayName,
-            options.Value.ProviderType,
-            options.Value.ApiVersion,
-            options.Value.Capabilities);
-
-        return TypedResults.Ok(ApiEnvelope<ProviderInfoResponse>.Ok(response));
-    }
-
-    private static Results<Ok<ApiEnvelope<SongStatusResponse>>, ValidationProblem> GetSongStatus(
+    private static Results<Ok<ApiEnvelope<SongStatusResponse>>, ValidationProblem> Handle(
         string songHash,
         IOfficialSongCatalog catalog)
     {

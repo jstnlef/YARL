@@ -1,8 +1,12 @@
-namespace YARL.Leaderboards;
+using YARL.Features.Leaderboards.Configuration;
+using YARL.Features.Leaderboards.Endpoints;
+using YARL.Features.Leaderboards.Services;
 
-public static class LeaderboardServiceCollectionExtensions
+namespace YARL.Features.Leaderboards;
+
+public static class LeaderboardsModule
 {
-    public static IServiceCollection AddLeaderboardServices(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddLeaderboards(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddOptions<ProviderMetadataOptions>()
             .Bind(configuration.GetSection(ProviderMetadataOptions.SectionName))
@@ -19,5 +23,16 @@ public static class LeaderboardServiceCollectionExtensions
         services.AddSingleton<IOfficialSongCatalog, InMemoryOfficialSongCatalog>();
 
         return services;
+    }
+
+    public static IEndpointRouteBuilder MapLeaderboards(this IEndpointRouteBuilder endpoints)
+    {
+        var providerGroup = endpoints.MapGroup("/provider");
+        GetProviderInfoEndpoint.Map(providerGroup);
+
+        var songGroup = endpoints.MapGroup("/songs");
+        GetSongStatusEndpoint.Map(songGroup);
+
+        return endpoints;
     }
 }

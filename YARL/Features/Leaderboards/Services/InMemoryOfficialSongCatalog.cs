@@ -1,7 +1,9 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Options;
+using YARL.Features.Leaderboards.Configuration;
+using YARL.Features.Leaderboards.Domain;
 
-namespace YARL.Leaderboards;
+namespace YARL.Features.Leaderboards.Services;
 
 public sealed class InMemoryOfficialSongCatalog : IOfficialSongCatalog
 {

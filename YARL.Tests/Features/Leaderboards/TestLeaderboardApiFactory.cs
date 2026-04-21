@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
-using YARL.Leaderboards;
+using YARL.Features.Leaderboards.Configuration;
 
-namespace YARL.Tests.Leaderboards;
+namespace YARL.Tests.Features.Leaderboards;
 
 public sealed class TestLeaderboardApiFactory : WebApplicationFactory<Program>
 {

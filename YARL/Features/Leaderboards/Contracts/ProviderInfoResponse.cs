@@ -1,4 +1,6 @@
-namespace YARL.Leaderboards;
+using YARL.Features.Leaderboards.Configuration;
+
+namespace YARL.Features.Leaderboards.Contracts;
 
 public sealed record ProviderInfoResponse(
     string DisplayName,

@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace YARL.Leaderboards;
+namespace YARL.Features.Leaderboards.Domain;
 
 public readonly partial record struct SongHash(string Value)
 {

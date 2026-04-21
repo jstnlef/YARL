@@ -1,4 +1,4 @@
-namespace YARL.Leaderboards;
+namespace YARL.Features.Leaderboards.Contracts;
 
 public sealed record ApiEnvelope<T>(bool Success, T Data)
 {
