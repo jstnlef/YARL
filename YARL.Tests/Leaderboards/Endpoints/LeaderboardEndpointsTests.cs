@@ -1,10 +1,10 @@
 using System.Net;
 using System.Net.Http.Json;
 using Microsoft.AspNetCore.Mvc;
-using YARL.Features.Leaderboards.Contracts;
-using YARL.Tests.Features.Leaderboards;
+using YARL.Leaderboards.Contracts;
+using YARL.Tests.Leaderboards;
 
-namespace YARL.Tests.Features.Leaderboards.Endpoints;
+namespace YARL.Tests.Leaderboards.Endpoints;
 
 public class LeaderboardEndpointsTests(TestLeaderboardApiFactory factory) : IClassFixture<TestLeaderboardApiFactory>
 {

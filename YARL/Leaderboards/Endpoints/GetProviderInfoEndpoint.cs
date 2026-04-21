@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.Extensions.Options;
-using YARL.Features.Leaderboards.Configuration;
-using YARL.Features.Leaderboards.Contracts;
+using YARL.Leaderboards.Configuration;
+using YARL.Leaderboards.Contracts;
 
-namespace YARL.Features.Leaderboards.Endpoints;
+namespace YARL.Leaderboards.Endpoints;
 
 internal static class GetProviderInfoEndpoint
 {

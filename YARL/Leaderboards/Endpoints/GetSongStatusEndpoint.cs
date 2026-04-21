@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using YARL.Features.Leaderboards.Contracts;
-using YARL.Features.Leaderboards.Domain;
-using YARL.Features.Leaderboards.Services;
+using YARL.Leaderboards.Contracts;
+using YARL.Leaderboards.Domain;
+using YARL.Leaderboards.Services;
 
-namespace YARL.Features.Leaderboards.Endpoints;
+namespace YARL.Leaderboards.Endpoints;
 
 internal static class GetSongStatusEndpoint
 {

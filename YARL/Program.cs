@@ -1,4 +1,5 @@
-using YARL.Features.Leaderboards;
+using YARL.Infrastructure.Serialization;
+using YARL.Leaderboards;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -17,6 +18,9 @@ app.MapLeaderboards();
 
 app.Run();
 
+// ReSharper disable once ClassNeverInstantiated.Global
+#pragma warning disable ASP0027
 public partial class Program
+#pragma warning restore ASP0027
 {
 }

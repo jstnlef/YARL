@@ -1,4 +1,4 @@
-namespace YARL.Features.Leaderboards.Configuration;
+namespace YARL.Leaderboards.Configuration;
 
 public sealed class ProviderCapabilities
 {

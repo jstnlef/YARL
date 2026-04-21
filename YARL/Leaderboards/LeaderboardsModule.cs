@@ -1,8 +1,8 @@
-using YARL.Features.Leaderboards.Configuration;
-using YARL.Features.Leaderboards.Endpoints;
-using YARL.Features.Leaderboards.Services;
+using YARL.Leaderboards.Configuration;
+using YARL.Leaderboards.Endpoints;
+using YARL.Leaderboards.Services;
 
-namespace YARL.Features.Leaderboards;
+namespace YARL.Leaderboards;
 
 public static class LeaderboardsModule
 {

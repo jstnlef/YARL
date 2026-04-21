@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
-using YARL.Features.Leaderboards.Contracts;
+using YARL.Leaderboards.Contracts;
 
 namespace YARL.Infrastructure.Serialization;
 

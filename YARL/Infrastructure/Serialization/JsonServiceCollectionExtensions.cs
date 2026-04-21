@@ -1,6 +1,4 @@
-using YARL.Infrastructure.Serialization;
-
-namespace Microsoft.Extensions.DependencyInjection;
+namespace YARL.Infrastructure.Serialization;
 
 public static class JsonServiceCollectionExtensions
 {
